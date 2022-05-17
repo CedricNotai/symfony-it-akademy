@@ -13,11 +13,12 @@ class QuoteController extends AbstractController {
     public function index(QuoteRepository $quoteRepository): Response
     {
         $quotes = $quoteRepository->findAll();
-        if (count($quotes) > 12) {
-            $quotes = [];
-        }
+        // if (count($quotes) > 12) {
+        //     $quotes = [];
+        // }
+
         return $this->render(
-            'quote/index.html.twig', [
+            'quote/citations.html.twig', [
                 'quotes' => $quotes,
             ]
         );

@@ -56,7 +56,7 @@ class __TwigTemplate_d43327db76a2d9de0d7f4e46e35e68e6bb6df5ec75d5337efcec9889aa5
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Num Sec Sociale!";
+        echo "Tableau Alphabet";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -150,7 +150,7 @@ class __TwigTemplate_d43327db76a2d9de0d7f4e46e35e68e6bb6df5ec75d5337efcec9889aa5
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Num Sec Sociale!{% endblock %}
+{% block title %}Tableau Alphabet{% endblock %}
 
 {% block body %}
 <style>

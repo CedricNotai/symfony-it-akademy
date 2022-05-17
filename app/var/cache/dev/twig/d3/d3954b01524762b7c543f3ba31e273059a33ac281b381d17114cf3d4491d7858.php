@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* exo/index.html.twig */
-class __TwigTemplate_950d4e5481a49fa5d37d9ddcea1ae78d3a54cc374066a7ae3a9386739bccaa20 extends Template
+/* exo/exo_base.html.twig */
+class __TwigTemplate_c1f8b671b5d93d8aad4d0fe260afb7237862b1897319ce1f494a04970c58a123 extends Template
 {
     private $source;
     private $macros = [];
@@ -24,6 +24,8 @@ class __TwigTemplate_950d4e5481a49fa5d37d9ddcea1ae78d3a54cc374066a7ae3a9386739bc
 
         $this->source = $this->getSourceContext();
 
+        $this->parent = false;
+
         $this->blocks = [
             'exo_title' => [$this, 'block_exo_title'],
             'exo_style' => [$this, 'block_exo_style'],
@@ -31,73 +33,79 @@ class __TwigTemplate_950d4e5481a49fa5d37d9ddcea1ae78d3a54cc374066a7ae3a9386739bc
         ];
     }
 
-    protected function doGetParent(array $context)
-    {
-        // line 1
-        return "exo/exo_base.html.twig";
-    }
-
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "exo/index.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "exo/exo_base.html.twig"));
 
-        $this->parent = $this->loadTemplate("exo/exo_base.html.twig", "exo/index.html.twig", 1);
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+        // line 1
+        echo "<html>
+    <head>
+        <meta charset=\"UTF-8\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
-    }
+        <link
+                href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css\"
+                rel=\"stylesheet\"
+                integrity=\"sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6\"
+                crossorigin=\"anonymous\">
 
-    // line 3
-    public function block_exo_title($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "exo_title"));
+        <title>";
+        // line 12
+        $this->displayBlock('exo_title', $context, $blocks);
+        echo "</title>
+        <style>";
+        // line 13
+        $this->displayBlock('exo_style', $context, $blocks);
+        echo "</style>
+    </head>
 
-        echo "Hello ExoController!";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-    }
-
-    // line 4
-    public function block_exo_style($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "exo_style"));
-
-        // line 5
-        echo "    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    </style>
-";
+    <body>
+        ";
+        // line 17
+        $this->displayBlock('exo_body', $context, $blocks);
+        // line 19
+        echo "    </body>
+</html>";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
     // line 12
+    public function block_exo_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "exo_title"));
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 13
+    public function block_exo_style($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "exo_style"));
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 17
     public function block_exo_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "exo_body"));
 
-        // line 13
-        echo "<div class=\"example-wrapper\">
-    <h1>Hello , my name is ";
-        // line 14
-        echo twig_escape_filter($this->env, twig_lower_filter($this->env, (isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 14, $this->source); })())), "html", null, true);
-        echo "</h1>
-";
-        // line 16
-        echo "</div>
-";
+        // line 18
+        echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -105,38 +113,35 @@ class __TwigTemplate_950d4e5481a49fa5d37d9ddcea1ae78d3a54cc374066a7ae3a9386739bc
 
     public function getTemplateName()
     {
-        return "exo/index.html.twig";
-    }
-
-    public function isTraitable()
-    {
-        return false;
+        return "exo/exo_base.html.twig";
     }
 
     public function getDebugInfo()
     {
-        return array (  99 => 16,  95 => 14,  92 => 13,  85 => 12,  74 => 5,  67 => 4,  54 => 3,  37 => 1,);
+        return array (  108 => 18,  101 => 17,  89 => 13,  77 => 12,  69 => 19,  67 => 17,  60 => 13,  56 => 12,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'exo/exo_base.html.twig' %}
+        return new Source("<html>
+    <head>
+        <meta charset=\"UTF-8\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
-{% block exo_title %}Hello ExoController!{% endblock %}
-{% block exo_style %}
-    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    </style>
-{% endblock %}
+        <link
+                href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css\"
+                rel=\"stylesheet\"
+                integrity=\"sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6\"
+                crossorigin=\"anonymous\">
 
+        <title>{% block exo_title %}{% endblock %}</title>
+        <style>{% block exo_style %}{% endblock %}</style>
+    </head>
 
-{% block exo_body %}
-<div class=\"example-wrapper\">
-    <h1>Hello , my name is {{ name | lower }}</h1>
-{#    <h1>and , my firstname is {{ firstname }}</h1>#}
-</div>
-{% endblock %}
-", "exo/index.html.twig", "/var/www/symfony_docker/templates/exo/index.html.twig");
+    <body>
+        {% block exo_body %}
+        {% endblock %}
+    </body>
+</html>", "exo/exo_base.html.twig", "/var/www/symfony_docker/templates/exo/exo_base.html.twig");
     }
 }

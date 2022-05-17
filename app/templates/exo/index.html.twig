@@ -1,15 +1,17 @@
-{% extends 'base.html.twig' %}
+{% extends 'exo/exo_base.html.twig' %}
 
-{% block title %}Hello ExoController!{% endblock %}
+{% block exo_title %}Hello ExoController!{% endblock %}
+{% block exo_style %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
+{% block exo_body %}
 <div class="example-wrapper">
-    <h1>Hello , my name is {{ name }}</h1>
+    <h1>Hello , my name is {{ name | lower }}</h1>
 {#    <h1>and , my firstname is {{ firstname }}</h1>#}
 </div>
 {% endblock %}
