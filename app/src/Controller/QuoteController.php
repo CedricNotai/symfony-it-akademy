@@ -9,21 +9,16 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class QuoteController extends AbstractController {
 
-    #[Route('/', name: 'index')]
-    
-    // @Route('', name:'index')
-    // @param QuoteRepository $quoteRepository
-    // @return Response
-
-    public function index(
-        QuoteRepository $quoteRepository
-    )
-    : Response {
-
+    #[Route('', name: 'index')]
+    public function index(QuoteRepository $quoteRepository): Response
+    {
+        $quotes = $quoteRepository->findAll();
+        if (count($quotes) > 12) {
+            $quotes = [];
+        }
         return $this->render(
-            'quote/index.html.twig',
-            [
-                'quotes' => $quoteRepository->findAll(),
+            'quote/index.html.twig', [
+                'quotes' => $quotes,
             ]
         );
     }
