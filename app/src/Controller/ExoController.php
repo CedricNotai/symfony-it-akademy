@@ -51,4 +51,29 @@ class ExoController extends AbstractController
             'numeroSecuriteSociale'  => $numeroSecuriteSociale,
         ]);
     }
+
+    #[Route(
+        'exo/loto/{min}/{max}',
+        name: 'loto'
+    )]
+    public function loto(int $min, int $max): Response
+    {
+        $number = random_int($min, $max);
+        return new Response('<h2>' . $number . '</h2>');
+    }
+
+    #[Route(
+        'exo/alphabet',
+        name: 'alphabet'
+    )]
+    public function tableauAlphabet(): Response
+    {
+        // $alphabet = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z';
+        $string = 'AZERTYUIOPQSDFGHJKLMWXCVBN';
+        $alphabet = str_split($string);
+        sort($alphabet);
+        return $this->render('exo/alphabet.html.twig', [
+            'alphabet'  => $alphabet,
+        ]);    
+    }
 }
