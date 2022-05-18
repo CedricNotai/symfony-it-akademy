@@ -10,6 +10,8 @@ return [
     [ // $staticRoutes
         '/bootstrap' => [[['_route' => 'app_bootstrap', '_controller' => 'App\\Controller\\BootstrapController::index'], null, null, null, false, false, null]],
         '/exo/alphabet' => [[['_route' => 'exo_alphabet', '_controller' => 'App\\Controller\\ExoController::tableauAlphabet'], null, null, null, false, false, null]],
+        '/product' => [[['_route' => 'app_product_index', '_controller' => 'App\\Controller\\ProductController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/product/new' => [[['_route' => 'app_product_new', '_controller' => 'App\\Controller\\ProductController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\QuoteController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -22,14 +24,22 @@ return [
                     .')'
                     .'|loto/([^/]++)/([^/]++)(*:119)'
                 .')'
+                .'|/product/([^/]++)(?'
+                    .'|(*:148)'
+                    .'|/edit(*:161)'
+                    .'|(*:169)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         70 => [[['_route' => 'exo_index', '_controller' => 'App\\Controller\\ExoController::index'], ['name'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         89 => [[['_route' => 'exo_get_numero_secu_sociale', '_controller' => 'App\\Controller\\ExoController::getNumeroSecuriteSociale'], ['numeroSecuriteSociale'], ['GET' => 0], null, false, true, null]],
-        119 => [
-            [['_route' => 'exo_loto', '_controller' => 'App\\Controller\\ExoController::loto'], ['min', 'max'], null, null, false, true, null],
+        119 => [[['_route' => 'exo_loto', '_controller' => 'App\\Controller\\ExoController::loto'], ['min', 'max'], null, null, false, true, null]],
+        148 => [[['_route' => 'app_product_show', '_controller' => 'App\\Controller\\ProductController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        161 => [[['_route' => 'app_product_edit', '_controller' => 'App\\Controller\\ProductController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        169 => [
+            [['_route' => 'app_product_delete', '_controller' => 'App\\Controller\\ProductController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
