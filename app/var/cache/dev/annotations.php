@@ -60,6 +60,20 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%23addLink' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
+'App%5CController%5CBootstrapController' => 0,
+'[C]App%5CController%5CBootstrapController' => 1,
+'App%5CController%5CBootstrapController%23index' => 0,
+'[C]App%5CController%5CBootstrapController%23index' => 1,
+'App%5CController%5CExoController' => 0,
+'[C]App%5CController%5CExoController' => 1,
+'App%5CController%5CExoController%23index' => 0,
+'[C]App%5CController%5CExoController%23index' => 1,
+'App%5CController%5CExoController%23getNumeroSecuriteSociale' => 0,
+'[C]App%5CController%5CExoController%23getNumeroSecuriteSociale' => 1,
+'App%5CController%5CExoController%23loto' => 0,
+'[C]App%5CController%5CExoController%23loto' => 1,
+'App%5CController%5CExoController%23tableauAlphabet' => 0,
+'[C]App%5CController%5CExoController%23tableauAlphabet' => 1,
 'App%5CController%5CQuoteController' => 0,
 '[C]App%5CController%5CQuoteController' => 1,
 'App%5CController%5CQuoteController%23index' => 0,
@@ -558,7 +572,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1652699543,
+1 => 1652866771,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

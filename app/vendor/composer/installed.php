@@ -304,6 +304,15 @@
                 0 => '1.0',
             ),
         ),
+        'symfony/asset' => array(
+            'pretty_version' => 'v5.2.12',
+            'version' => '5.2.12.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/asset',
+            'aliases' => array(),
+            'reference' => 'abe64fee9fa2978c730c84d0d6df760f2d9ddba0',
+            'dev_requirement' => false,
+        ),
         'symfony/cache' => array(
             'pretty_version' => 'v5.2.12',
             'version' => '5.2.12.0',
@@ -653,6 +662,15 @@
             'install_path' => __DIR__ . '/../symfony/var-exporter',
             'aliases' => array(),
             'reference' => 'b7898a65fc91e7c41de7a88c7db9aee9c0d432f0',
+            'dev_requirement' => false,
+        ),
+        'symfony/webpack-encore-bundle' => array(
+            'pretty_version' => 'v1.14.1',
+            'version' => '1.14.1.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/webpack-encore-bundle',
+            'aliases' => array(),
+            'reference' => '6b18be99bf2a5a402b80a2c00043fe0b365fe836',
             'dev_requirement' => false,
         ),
         'symfony/yaml' => array(

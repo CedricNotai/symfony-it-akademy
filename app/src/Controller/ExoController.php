@@ -6,11 +6,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+// va ajouter un préfixe à toutes les routes du document
+#[Route(
+    '/exo',
+    name: 'exo_'
+)]
+
 class ExoController extends AbstractController
 {
     #[Route(
-        '/exo/candidat/{name}',
-        name: 'exo',
+        '/candidat/{name}',
+        name: 'index',
         methods: ['GET', 'POST']
     )]
     public function index(string $name): Response
@@ -37,7 +43,7 @@ class ExoController extends AbstractController
 
 
     #[Route(
-        '/exo/candidat/numero/{numeroSecuriteSociale}',
+        '/candidat/numero/{numeroSecuriteSociale}',
         name: 'get_numero_secu_sociale',
         requirements: [
             'numeroSecuriteSociale' => '\d+',
@@ -53,7 +59,7 @@ class ExoController extends AbstractController
     }
 
     #[Route(
-        'exo/loto/{min}/{max}',
+        '/loto/{min}/{max}',
         name: 'loto'
     )]
     public function loto(int $min, int $max): Response
@@ -63,7 +69,7 @@ class ExoController extends AbstractController
     }
 
     #[Route(
-        'exo/alphabet',
+        '/alphabet',
         name: 'alphabet'
     )]
     public function tableauAlphabet(): Response
