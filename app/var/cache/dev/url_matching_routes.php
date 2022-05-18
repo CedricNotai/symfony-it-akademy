@@ -8,6 +8,7 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/bootstrap' => [[['_route' => 'app_bootstrap', '_controller' => 'App\\Controller\\BootstrapController::index'], null, null, null, false, false, null]],
         '/exo/alphabet' => [[['_route' => 'alphabet', '_controller' => 'App\\Controller\\ExoController::tableauAlphabet'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\QuoteController::index'], null, null, null, false, false, null]],
     ],

@@ -4,5 +4,10 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
+    'app_bootstrap' => [[], ['_controller' => 'App\\Controller\\BootstrapController::index'], [], [['text', '/bootstrap']], [], []],
+    'exo' => [['name'], ['_controller' => 'App\\Controller\\ExoController::index'], [], [['variable', '/', '[^/]++', 'name', true], ['text', '/exo/candidat']], [], []],
+    'get_numero_secu_sociale' => [['numeroSecuriteSociale'], ['_controller' => 'App\\Controller\\ExoController::getNumeroSecuriteSociale'], ['numeroSecuriteSociale' => '\\d+'], [['variable', '/', '\\d+', 'numeroSecuriteSociale', true], ['text', '/exo/candidat/numero']], [], []],
+    'loto' => [['min', 'max'], ['_controller' => 'App\\Controller\\ExoController::loto'], [], [['variable', '/', '[^/]++', 'max', true], ['variable', '/', '[^/]++', 'min', true], ['text', '/exo/loto']], [], []],
+    'alphabet' => [[], ['_controller' => 'App\\Controller\\ExoController::tableauAlphabet'], [], [['text', '/exo/alphabet']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\QuoteController::index'], [], [['text', '/']], [], []],
 ];

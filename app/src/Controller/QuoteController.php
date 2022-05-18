@@ -3,24 +3,28 @@
 namespace App\Controller;
 
 use App\Repository\QuoteRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class QuoteController extends AbstractController {
 
     #[Route('', name: 'index')]
-    public function index(QuoteRepository $quoteRepository): Response
+    public function index(QuoteRepository $quoteRepository): Response|RedirectResponse
     {
-        $quotes = $quoteRepository->findAll();
-        // if (count($quotes) > 12) {
-        //     $quotes = [];
-        // }
+        // redirection 
+        return $this->redirectToRoute('exo', ['name' => 'Alain Deloin']);
 
-        return $this->render(
-            'quote/citations.html.twig', [
-                'quotes' => $quotes,
-            ]
-        );
+
+        // $quotes = $quoteRepository->findAll();
+        // // if (count($quotes) > 12) {
+        // //     $quotes = [];
+        // // }
+        // return $this->render(
+        //     'quote/citations.html.twig', [
+        //         'quotes' => $quotes,
+        //     ]
+        // );
     }
 }
